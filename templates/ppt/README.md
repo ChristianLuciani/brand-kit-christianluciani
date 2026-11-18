@@ -12,10 +12,10 @@ Siete variantes, una por superficie de la paleta aprobada (`docs/logo.md` §3):
 | `plantilla-night.pptx` | night + ambiente aprobado | oro `#c9a84c` / teal | Charla principal, salas oscuras: **default de marca** |
 | `plantilla-light.pptx` | blanco | azul profundo / teal oscuro | Proyector con luz ambiente, aulas, impresión |
 | `plantilla-teal.pptx` | claro `#f4fefd` (teal invertida) | teal oscuro `#00706a` / acento `#00948e` | Identidad teal sobre fondo claro, legible (AA) |
-| `plantilla-gold.pptx` | gradiente oro `#c9a84c` → ámbar `#d99a2b` (120°) | night / azul profundo | Statement de alto impacto, pitch comercial |
+| `plantilla-gold.pptx` | aurora dorada: night + mesh oro/ámbar/teal | oro / teal | Statement de alto impacto, pitch comercial |
 | `plantilla-deep.pptx` | azul profundo `#16324f` | luz / oro y teal | Ejecutiva, boardroom, datos serios |
 | `plantilla-papel.pptx` | papel cálido `#f6f1e6` | oro profundo / teal | Editorial, premio, handout elegante |
-| `plantilla-coral.pptx` | gradiente salmón `#ffb3a0` → `#ff8a70` (135°) | night | Energía, launch, announcement |
+| `plantilla-coral.pptx` | aurora salmón: night + mesh supernova/coral/ámbar/teal | coral claro / ámbar | Energía, launch, announcement |
 
 ## Cómo se usar
 

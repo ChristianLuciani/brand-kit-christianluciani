@@ -119,21 +119,21 @@ const THEMES: Record<string, Theme> = {
     win: "FFFFFF", scrim: "050810", captionOnScrim: "E9E6DC",
   },
   gold: {
-    name: "CL Gold — Espirángulo (gradiente)",
+    name: "CL Gold Aurora — Espirángulo",
     colors: {
-      dk1: "050810", lt1: "C9A84C", dk2: "8A5A1C", lt2: "FDF3D7",
-      accent1: "050810", accent2: "16324F", accent3: "8A5A1C",
-      accent4: "D99A2B", accent5: "050810", accent6: "16324F",
+      dk1: "050810", lt1: "0B1120", dk2: "16324F", lt2: "E9E6DC",
+      accent1: "C9A84C", accent2: "00C9C0", accent3: "D99A2B",
+      accent4: "FFB49E", accent5: "050810", accent6: "16324F",
     },
-    // gradiente dorado: oro de marca → ámbar, diagonal 120°
-    masterBg: "C9A84C-D99A2B-120",
-    masterBadge: `${ASSETS}/badge-night-256.png`,
-    badgeOpacity: "0.8",
-    title: "050810", body: "050810", muted: "4A3D14",
-    accent: "16324F", // azul profundo sobre oro: 5.5:1
-    lab: "4A3D14",
-    mark: `${ASSETS}/mark-mini-night-1024.png`, // C night sobre oro; la C oro no se lee sobre oro
-    win: "FDF6DF", scrim: "050810", captionOnScrim: "E9E6DC",
+    // aurora: base night + mesh de luces oro/ámbar/teal (svg rasterizado)
+    masterBg: `image:${ASSETS}/bg-aurora-gold.png`,
+    masterBadge: `${ASSETS}/badge-white-256.png`,
+    badgeOpacity: "0.45",
+    title: "C9A84C", body: "E9E6DC", muted: "918E83",
+    accent: "00C9C0",
+    lab: "C9A84C",
+    mark: `${ASSETS}/mark-settled-night-2048.png`,
+    win: "0B1120", scrim: "050810", captionOnScrim: "E9E6DC",
   },
   deep: {
     name: "CL Deep — Espirángulo",
@@ -167,21 +167,21 @@ const THEMES: Record<string, Theme> = {
     win: "FFFFFF", scrim: "16324F", captionOnScrim: "E9E6DC",
   },
   coral: {
-    name: "CL Coral — Espirángulo (gradiente salmón)",
+    name: "CL Coral Aurora — Espirángulo",
     colors: {
-      dk1: "050810", lt1: "FFB3A0", dk2: "5C2A20", lt2: "FFD9CF",
-      accent1: "050810", accent2: "16324F", accent3: "C9A84C",
-      accent4: "8A5A1C", accent5: "5C2A20", accent6: "FFFFFF",
+      dk1: "050810", lt1: "0B1120", dk2: "16324F", lt2: "FFD9CF",
+      accent1: "FFB3A0", accent2: "C9A84C", accent3: "FF8A70",
+      accent4: "D99A2B", accent5: "E9E6DC", accent6: "00C9C0",
     },
-    // gradiente salmón: supernova → coral del espectro estelar, diagonal 135°
-    masterBg: "FFB3A0-FF8A70-135",
-    masterBadge: `${ASSETS}/badge-night-256.png`,
-    badgeOpacity: "0.8",
-    title: "050810", body: "050810", muted: "6B2D22",
-    accent: "16324F",
-    lab: "6B2D22",
-    mark: `${ASSETS}/mark-mini-night-1024.png`,
-    win: "FFF0EC", scrim: "050810", captionOnScrim: "E9E6DC",
+    // aurora: base night + mesh supernova/coral/ámbar/teal (svg rasterizado)
+    masterBg: `image:${ASSETS}/bg-aurora-coral.png`,
+    masterBadge: `${ASSETS}/badge-white-256.png`,
+    badgeOpacity: "0.45",
+    title: "FFD9CF", body: "E9E6DC", muted: "918E83",
+    accent: "FFB49E",
+    lab: "FFB3A0",
+    mark: `${ASSETS}/mark-settled-night-2048.png`,
+    win: "0B1120", scrim: "050810", captionOnScrim: "E9E6DC",
   },
 };
 

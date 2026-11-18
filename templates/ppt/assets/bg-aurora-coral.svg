@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+  <!-- CL Coral Aurora — base night + mesh de luces (supernova, coral, ámbar, teal) -->
+  <defs>
+    <radialGradient id="amb" gradientUnits="userSpaceOnUse" cx="1920" cy="820" r="2600">
+      <stop offset="0%"  stop-color="#0b1120"/>
+      <stop offset="62%" stop-color="#050810"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="nova" gradientUnits="userSpaceOnUse" cx="2740" cy="520" r="1500">
+      <stop offset="0%"  stop-color="#ffb3a0" stop-opacity="0.34"/>
+      <stop offset="45%" stop-color="#ffb3a0" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffb3a0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coral" gradientUnits="userSpaceOnUse" cx="420" cy="1720" r="1400">
+      <stop offset="0%"  stop-color="#ff8a70" stop-opacity="0.24"/>
+      <stop offset="50%" stop-color="#ff8a70" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#ff8a70" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambar" gradientUnits="userSpaceOnUse" cx="3520" cy="1820" r="1200">
+      <stop offset="0%"  stop-color="#d99a2b" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="teal" gradientUnits="userSpaceOnUse" cx="300" cy="240" r="950">
+      <stop offset="0%"  stop-color="#00c9c0" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#00c9c0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="3840" height="2160" fill="url(#amb)"/>
+  <ellipse cx="2740" cy="520"  rx="1500" ry="1150" fill="url(#nova)"/>
+  <ellipse cx="420"  cy="1720" rx="1400" ry="1100" fill="url(#coral)"/>
+  <ellipse cx="3520" cy="1820" rx="1200" ry="900"  fill="url(#ambar)"/>
+  <ellipse cx="300"  cy="240"  rx="950"  ry="750"  fill="url(#teal)"/>
+</svg>

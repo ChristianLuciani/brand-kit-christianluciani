@@ -332,7 +332,7 @@ export function formatDiff(result) {
 // ---------------------------------------------------------------------------
 
 const authHeaders = (accept) => {
-  const headers = { 'User-Agent': 'cluciani-brand-kit/verify-assets', Accept: accept };
+  const headers = { 'User-Agent': 'brand-kit-christianluciani/verify-assets', Accept: accept };
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
   if (token) headers.Authorization = `Bearer ${token}`;
   return headers;

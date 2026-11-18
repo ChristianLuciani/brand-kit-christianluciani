@@ -27,7 +27,7 @@ jsDelivr, que ya es la CDN del brand kit. No hace falta Cloudflare.
 Los archivos viven en `assets/badge/` y se sirven con el resto del repo:
 
 ```text
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo.svg
+https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.3.0/assets/badge/espirangulo.svg
 ```
 
 Los ejemplos usan `@v1.3.0`, el tag de este release. Mientras el tag no exista,
@@ -47,19 +47,19 @@ Ejemplos:
 
 ```html
 <!-- default -->
-<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
+<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.3.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
 
 <!-- teal -->
-<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo-teal.svg" alt="Espirángulo">
+<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.3.0/assets/badge/espirangulo-teal.svg" alt="Espirángulo">
 
 <!-- dark mode: oro en claro, blanco en oscuro -->
-<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo-adaptive.svg" alt="Espirángulo — Christian Luciani">
+<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.3.0/assets/badge/espirangulo-adaptive.svg" alt="Espirángulo — Christian Luciani">
 ```
 
 En Markdown:
 
 ```md
-![Espirángulo](https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo.svg)
+![Espirángulo](https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.3.0/assets/badge/espirangulo.svg)
 ```
 
 Render de tamaños y variantes: [`badge-render.png`](badge-render.png) (el HTML

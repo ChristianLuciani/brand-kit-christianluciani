@@ -14,7 +14,7 @@ import { DEFAULT_COLOR, PATH, TITLE, VIEWBOX } from './icon.generated.mjs';
 import { renderSvg } from './icon.mjs';
 
 export const SLUG = 'espirangulo';
-export const REPO_URL = 'https://github.com/ChristianLuciani/cluciani-brand-kit';
+export const REPO_URL = 'https://github.com/ChristianLuciani/brand-kit-christianluciani';
 export const MIN_SIZE = 3;
 export const MAX_SIZE = 16383;
 export const CACHE_CONTROL = 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800';

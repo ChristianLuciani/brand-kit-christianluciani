@@ -39,15 +39,15 @@ tag, nunca `main`: los assets de una versión no cambian.
 jsDelivr sirve el repo público con caché inmutable por tag:
 
 ```
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-dark.png
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-light.png
+https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/logo-aurea-1024-dark.png
+https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/logo-aurea-1024-light.png
 ```
 
 Ejemplo para el README de perfil (HTML, controla el tamaño en GitHub):
 
 ```html
 <p align="center">
-  <img width="320" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-dark.png" alt="Christian Luciani">
+  <img width="320" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/logo-aurea-1024-dark.png" alt="Christian Luciani">
 </p>
 ```
 
@@ -90,12 +90,12 @@ Favicon con tile teal (opciones de color, §3.2 del manual). Se publican desde
 
 ```html
 <!-- máximo contraste: C en night -->
-<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-32.png">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/favicon-aurea-teal.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/favicon-aurea-teal-32.png">
 
 <!-- la C con sus colores (acabado ámbar→oro→luz) -->
-<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-gold.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-gold-32.png">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/favicon-aurea-teal-gold.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/logo/favicon-aurea-teal-gold-32.png">
 ```
 
 ### Badge (Espirángulo)
@@ -106,7 +106,7 @@ El badge es el **mini** (C + supernova) monocromo, generado desde
 ni deploy:
 
 ```html
-<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
+<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
 ```
 
 `assets/badge/` trae siete variantes de color (oro default, teal, ámbar, oro
@@ -127,7 +127,7 @@ paleta e Inter, y una slide-guía con las reglas del manual. jsDelivr sirve
 los archivos por tag, como el resto del repo:
 
 ```
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/templates/ppt/plantilla-night.pptx
+https://cdn.jsdelivr.net/gh/ChristianLuciani/brand-kit-christianluciani@v1.4.0/templates/ppt/plantilla-night.pptx
 ```
 
 `@main` sirve para pruebas mientras el tag no exista. Hojas de contactos de las

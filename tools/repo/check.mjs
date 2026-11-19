@@ -42,12 +42,13 @@ const failures = [];
 
 const pkg = JSON.parse(await readFile(join(ROOT, 'package.json'), 'utf8'));
 const repoUrl = String(pkg.repository?.url ?? '').replace(/^git\+/, '').replace(/\.git$/, '');
+const slug = repoUrl === '' ? null : basename(repoUrl);
 
-if (repoUrl === '') {
+if (slug === null) {
   failures.push('SSOT ausente: package.json no declara repository.url');
-} else if (pkg.name !== basename(repoUrl)) {
+} else if (pkg.name !== slug) {
   failures.push(
-    `SSOT divergente: package.json name="${pkg.name}" ≠ basename(repository.url)="${basename(repoUrl)}" — renombrar es editar package.json, nada más.`,
+    `SSOT divergente: package.json name="${pkg.name}" ≠ basename(repository.url)="${slug}" — renombrar es editar package.json, nada más.`,
   );
 }
 
@@ -68,7 +69,7 @@ for await (const path of walk(ROOT)) {
   if (DERIVAN_DEL_SSOT.has(relative)) continue;
   const lines = (await readFile(path, 'utf8')).split('\n');
   lines.forEach((line, i) => {
-    if (line.includes(OWNER) && line.includes(basename(repoUrl))) {
+    if (slug !== null && line.includes(OWNER) && line.includes(slug)) {
       failures.push(`${relative}:${i + 1} hardcodea el host del brand kit fuera del SSOT (package.json)`);
     }
   });

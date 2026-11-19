@@ -47,6 +47,7 @@ Cada variante tiene su hoja de contactos renderizada (11 slides por cuadrícula)
 
 ## Detalle técnico
 
+- Consumo por jsDelivr, como el resto del repo: `https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/templates/ppt/plantilla-night.pptx` (`@main` sirve para pruebas mientras el tag no exista).
 - Generadas con `officecli` sobre un deck en blanco; assets derivados con transparencia real (16:9, 3840×2160) desde `assets/logo/` (fuente canónica, tag `v1.3.0`).
 - Regeneración: `node templates/ppt/build_templates.ts [night|light|teal|gold|deep|papel|coral]` (sin argumento = las siete) — Node 22+, sin dependencias nuevas. Requiere `officecli` en el PATH y `rsvg-convert` si regenerás los PNG de `assets/`.
 - El deck maestro conserva speaker notes con instrucciones en cada slide.

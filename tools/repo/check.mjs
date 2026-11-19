@@ -40,6 +40,26 @@ const NARRATIVOS_ARCHIVO = new Set(['README.md', 'SECURITY.md']);
 
 const failures = [];
 
+function containsCanonicalRepoUrl(line, slug) {
+  if (slug === null) return false;
+  const candidates = line.match(/https:\/\/[^\s"'`)<>\]]+/g) ?? [];
+  for (const candidate of candidates) {
+    try {
+      const url = new URL(candidate);
+      if (url.protocol !== 'https:') continue;
+      if (url.hostname !== 'github.com') continue;
+      const segments = url.pathname.split('/').filter(Boolean);
+      if (segments.length < 2) continue;
+      if (segments[0] !== 'ChristianLuciani') continue;
+      if (segments[1] !== slug) continue;
+      return true;
+    } catch {
+      // ignorar tokens que no parsean como URL válida
+    }
+  }
+  return false;
+}
+
 const pkg = JSON.parse(await readFile(join(ROOT, 'package.json'), 'utf8'));
 const repoUrl = String(pkg.repository?.url ?? '').replace(/^git\+/, '').replace(/\.git$/, '');
 const slug = repoUrl === '' ? null : basename(repoUrl);
@@ -69,7 +89,7 @@ for await (const path of walk(ROOT)) {
   if (DERIVAN_DEL_SSOT.has(relative)) continue;
   const lines = (await readFile(path, 'utf8')).split('\n');
   lines.forEach((line, i) => {
-    if (slug !== null && line.includes(OWNER) && line.includes(slug)) {
+    if (containsCanonicalRepoUrl(line, slug)) {
       failures.push(`${relative}:${i + 1} hardcodea el host del brand kit fuera del SSOT (package.json)`);
     }
   });

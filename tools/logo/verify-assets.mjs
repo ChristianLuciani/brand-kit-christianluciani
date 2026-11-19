@@ -35,11 +35,13 @@
  * así que verde significa «el árbol es el declarado», no «la fuente no avanzó».
  */
 import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { join, posix, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
+const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
 const ASSETS_DIR = 'assets/logo';
 const MANIFEST = 'tools/logo/assets.sha256';
 
@@ -332,7 +334,7 @@ export function formatDiff(result) {
 // ---------------------------------------------------------------------------
 
 const authHeaders = (accept) => {
-  const headers = { 'User-Agent': 'brand-kit-christianluciani/verify-assets', Accept: accept };
+  const headers = { 'User-Agent': `${pkg.name}/verify-assets`, Accept: accept };
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
   if (token) headers.Authorization = `Bearer ${token}`;
   return headers;

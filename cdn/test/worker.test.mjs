@@ -5,6 +5,7 @@ import worker, {
   CACHE_CONTROL,
   MAX_SIZE,
   MIN_SIZE,
+  REPO_URL,
   normalizeColor,
   parseSize,
   renderIcon,
@@ -132,7 +133,7 @@ describe('rutas y métodos', () => {
   test('root redirige al repo y favicon.ico es 204', async () => {
     const home = await get('/');
     expect(home.status).toBe(307);
-    expect(home.headers.get('location')).toBe('https://github.com/ChristianLuciani/brand-kit-christianluciani');
+    expect(home.headers.get('location')).toBe(REPO_URL);
 
     expect((await get('/favicon.ico')).status).toBe(204);
   });

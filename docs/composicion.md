@@ -1,7 +1,7 @@
 # Composición del Espirángulo por superficie y estado
 
 > **Estado: ratificada** por el operador el **2026-11-02** (sesión `59252d8f`;
-> traza: [issue #6](https://github.com/ChristianLuciani/cluciani-brand-kit/issues/6#issuecomment-6589283153)).
+> traza: [issue #6](https://github.com/ChristianLuciani/brand-kit-christianluciani/issues/6#issuecomment-6589283153)).
 > La decisión se tomó por pares A/B sobre render a tamaño real; cada fila
 > `deriva` de §4 es trabajo de implementación pendiente, no una decisión abierta.
 >

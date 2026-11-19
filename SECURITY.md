@@ -2,7 +2,7 @@
 
 ## Alcance
 
-`cluciani-brand-kit` es un repo **público** que publica assets de marca y el
+`brand-kit-christianluciani` es un repo **público** que publica assets de marca y el
 generador que los produce. Interesan reportes sobre:
 
 - **Integridad de los assets publicados** por tag/CDN (un asset que no coincide
@@ -19,7 +19,7 @@ infraestructura de terceros (GitHub, jsDelivr).
 ## Cómo reportar
 
 Usá **private vulnerability reporting** del repo:
-<https://github.com/ChristianLuciani/cluciani-brand-kit/security/advisories/new>.
+<https://github.com/ChristianLuciani/brand-kit-christianluciani/security/advisories/new>.
 No abras un issue público con el detalle de la vulnerabilidad.
 
 Incluí: versión/tag afectado, pasos de reproducción, impacto y, si aplica, el

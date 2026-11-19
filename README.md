@@ -1,4 +1,4 @@
-# cluciani-brand-kit
+# brand-kit-christianluciani
 
 Brand kit canónico de **Christian Luciani**: **Espirángulo**, el mark del
 triángulo-espiral, sus assets generados, el generador paramétrico y el manual

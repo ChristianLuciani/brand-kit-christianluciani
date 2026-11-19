@@ -1,5 +1,37 @@
 # Changelog
 
+## v1.4.0 — 2026-11-18
+
+Release de plantillas: la marca llega a **PowerPoint** con siete decks
+listos para presentar. Es aditivo: no toca ningún asset de `assets/logo/`
+ni `assets/badge/`, ni la geometría; sólo suma `templates/ppt/` y su
+documentación.
+
+### Plantillas PPT (`templates/ppt/`)
+
+- **Siete variantes**, una por superficie de la paleta (`docs/logo.md` §3):
+  `night` (default de marca, con el ambiente night aprobado como imagen del
+  master), `light` (blanco), `teal` invertida (fondo claro con acentos teal
+  oscuros legibles, AA), `gold` y `coral` (auroras: mesh de luces
+  oro/ámbar/teal y supernova/coral/ámbar/teal sobre base night), `deep`
+  (azul profundo) y `papel` (cálido editorial).
+- **Once slides compuestos por variante** — portada, agenda, statement,
+  sección, contenido, dato, dos columnas, cita, imagen full-bleed, cierre y
+  guía de marca (chuleta con paleta y reglas, se borra antes de presentar) —
+  con speaker notes de instrucciones en cada una.
+- **Tema OOXML por variante**: esquema de color de la paleta + **Inter**
+  (fallback a Segoe UI/Arial donde no esté instalada), layouts del master
+  renombrados en español.
+- **Reglas del manual embebidas**: settled por defecto (el full es variante,
+  no default), `-light` en superficies claras, mini-mark night sobre fondos
+  de color, teal plano sólo como acento.
+- **`build_templates.ts`** — regeneración declarativa con Node 22+ nativo
+  (sin dependencias nuevas): aplica el batch por `officecli`, hace
+  `save`/`close` explícitos y verifica **11 slides en disco** por variante.
+  Assets derivados con transparencia real desde `assets/logo/` (fuente
+  canónica, tag `v1.3.0`) vía `rsvg-convert`; previews renderizados en
+  `templates/ppt/preview/`.
+
 ## v1.3.0 — 2026-11-08
 
 Release del badge: el Espirángulo se publica como **icono estático por

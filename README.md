@@ -25,6 +25,7 @@ tools/logo/                # geometry.mjs (fuente de verdad), generador, tests, 
 tools/logo/assets.sha256   # manifiesto de paridad de assets/logo (sha256)
 tools/badge/               # generador del icono del CDN desde favicon-aurea.svg
 cdn/                       # Worker del badge CDN + preview local (docs/badge.md)
+templates/ppt/            # 7 plantillas PowerPoint de marca + builder + previews
 proposals/                 # HTML de la animación aprobada (fuente de diseño)
 ```
 
@@ -38,15 +39,15 @@ tag, nunca `main`: los assets de una versión no cambian.
 jsDelivr sirve el repo público con caché inmutable por tag:
 
 ```
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/logo-aurea-1024-dark.png
-https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/logo-aurea-1024-light.png
+https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-dark.png
+https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-light.png
 ```
 
 Ejemplo para el README de perfil (HTML, controla el tamaño en GitHub):
 
 ```html
 <p align="center">
-  <img width="320" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/logo-aurea-1024-dark.png" alt="Christian Luciani">
+  <img width="320" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/logo-aurea-1024-dark.png" alt="Christian Luciani">
 </p>
 ```
 
@@ -89,12 +90,12 @@ Favicon con tile teal (opciones de color, §3.2 del manual). Se publican desde
 
 ```html
 <!-- máximo contraste: C en night -->
-<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/favicon-aurea-teal.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/favicon-aurea-teal-32.png">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-32.png">
 
 <!-- la C con sus colores (acabado ámbar→oro→luz) -->
-<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/favicon-aurea-teal-gold.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/logo/favicon-aurea-teal-gold-32.png">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-gold.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/logo/favicon-aurea-teal-gold-32.png">
 ```
 
 ### Badge (Espirángulo)
@@ -105,7 +106,7 @@ El badge es el **mini** (C + supernova) monocromo, generado desde
 ni deploy:
 
 ```html
-<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.3.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
+<img height="24" src="https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/assets/badge/espirangulo.svg" alt="Espirángulo — Christian Luciani">
 ```
 
 `assets/badge/` trae siete variantes de color (oro default, teal, ámbar, oro
@@ -116,6 +117,23 @@ Si hace falta **color arbitrario por URL**, `cdn/` trae un Worker opcional con
 el contrato de `cdn.simpleicons.org` (`/espirangulo/<color>/<dark>?size=`), pero
 requiere deploy en Cloudflare. Detalle, variantes y límites:
 [docs/badge.md](docs/badge.md).
+
+### Plantillas PPT (templates/ppt/)
+
+Siete decks de PowerPoint con la marca resuelta —sólo escribís el contenido—:
+`night` (default), `light`, `teal` invertida, `gold` y `coral` (auroras),
+`deep` y `papel`. Cada una trae 11 slides compuestos, tema OOXML con la
+paleta e Inter, y una slide-guía con las reglas del manual. jsDelivr sirve
+los archivos por tag, como el resto del repo:
+
+```
+https://cdn.jsdelivr.net/gh/ChristianLuciani/cluciani-brand-kit@v1.4.0/templates/ppt/plantilla-night.pptx
+```
+
+`@main` sirve para pruebas mientras el tag no exista. Hojas de contactos de las
+siete variantes en `templates/ppt/preview/`. Guía de uso ("cuál variante cuándo")
+y regeneración en [templates/ppt/README.md](templates/ppt/README.md)
+(`node templates/ppt/build_templates.ts`, Node 22+).
 
 ## Regenerar
 

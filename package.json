@@ -20,7 +20,7 @@
     "repo:check": "node tools/repo/check.mjs"
   },
   "devDependencies": {
-    "vitest": "5.1.0"
+    "vitest": "5.1.1"
   },
   "engines": {
     "node": ">=20"

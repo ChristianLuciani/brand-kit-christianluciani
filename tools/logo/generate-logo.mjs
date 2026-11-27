@@ -265,7 +265,15 @@ ${typography ? layerTypography(905, cfg, { surface }) : ""}
 
 /* ── wrappers de rasterización (SVG inline; Chrome rasteriza filtros fidelísimos) ── */
 
-const unwrapSvg = (doc) => doc.replace(/^\s*<\?xml[^>]*\?>\s*/, "").replace(/<!--[\s\S]*?-->\s*/, "");
+const unwrapSvg = (doc) => {
+  let out = doc.replace(/^\s*<\?xml[^>]*\?>\s*/, "");
+  let prev;
+  do {
+    prev = out;
+    out = out.replace(/<!--[\s\S]*?-->/g, "");
+  } while (out !== prev);
+  return out;
+};
 
 /* ambiente night APROBADO del HTML (PR #53): gradiente radial del body
    (radial 1100×780 sobre stage 620, --bg-1→--bg-0) + halo teal del
